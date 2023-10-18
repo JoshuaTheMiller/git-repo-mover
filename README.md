@@ -1,6 +1,14 @@
+<div align="center">
+
 # git-repo-mover
 
+<img src="https://github.com/JoshuaTheMiller/git-repo-mover/assets/4266541/28b1a287-7a48-42f0-9b64-e4ae63deaf55" alt="An octocat moving repositories around" width="300" />
+
 A simple tool to help with moving git repos around
+
+[![Build](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml/badge.svg)](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml) 
+
+</div>
 
 ## Now on NPM!
 
