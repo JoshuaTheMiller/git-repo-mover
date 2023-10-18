@@ -6,7 +6,7 @@
 
 A simple tool to help with moving git repos around
 
-[![Build](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml/badge.svg)](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml) 
+[![Build](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml/badge.svg)](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml) [![CodeQL](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/github-code-scanning/codeql)
 
 </div>
 
