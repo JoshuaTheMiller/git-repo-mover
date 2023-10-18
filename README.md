@@ -2,6 +2,31 @@
 
 A simple tool to help with moving git repos around
 
+## Now on NPM!
+
+To run this tool, you do not need to clone this repository nor do you need to install the tool locally. By ensuring you have the [Prerequisites](#prerequisites) taken care of, you can simply run this tool using `npx`:
+
+```sh
+# You may have to accept the prompt for this tool to be downloaded!
+# Note- all commands displayed below are explained further in this README.
+npx repo-mover@latest
+# or
+npx repo-mover@latest generate-configuration -a $sourceAccount -d $destinationAccountUrl --source-type github --destination-type github
+# or
+npx repo-mover@latest apply --accept
+# etc.
+```
+
+Of course you are free to install this tool if you wish:
+
+```sh
+# Install locally
+npm i -g repo-mover
+# All commands will now function according to the documentation contained within this repository. 
+# For example:
+git-repo-mover apply --accept
+```
+
 ## Definitions
 
 * `SourceSystem` - the location from where the repositories are being cloned/deleted.
@@ -11,12 +36,16 @@ A simple tool to help with moving git repos around
 
 While this tool was made to streamline the transfer of many repos from one system to another, some basic setup is still necessary. This section details such setup and covers how to then utilize this tool for one case: transferring from GitHub Enterprise Server to GitHub.
 
-### Setup
+### Prerequisites
 
 1. Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-2. Authenticate git with the credentials of your Source System (i.e., login to GitHub via git)
-3. Authenticate git with the credentials of your Destination System (i.e., login to GitHub via git)
-4. Create a `.env` file in the location where this tool will be ran.
+2. Install [Node](https://nodejs.org/en/download)
+
+### Tool Setup
+
+1. Authenticate git with the credentials of your Source System (i.e., login to GitHub via git)
+2. Authenticate git with the credentials of your Destination System (i.e., login to GitHub via git)
+3. Create a `.env` file in the location where this tool will be ran.
    * Create a Token (see [tokens][tokens]) for your Source System, and add it to the `.env` file (e.g., `SourceToken=token`)
    * Add SourceApiHost to the `.env` file (e.g., `SourceHost=https://github.somecompany.com/api/v3`)
    * Create a Token (see [tokens][tokens]) for your Destination System, and add it to the `.env` file (e.g., `DestinationToken=token`)
