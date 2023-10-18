@@ -1,3 +1,5 @@
+import { RepoManager } from "./interfaces";
+
 class GitHubRepoManager implements RepoManager {
     public Scm =  "GitHub";
 
