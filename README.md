@@ -45,36 +45,4 @@ After successfully running the command shown above, you should find a file named
 
 📝 you do **not** need to split the values out into variables, though I did for clarity in the example above.
 
-## Notes
-
-```yaml
-sourceSystem: github
-destinationSystem: github
-repos:
-- source: https://github.somecompany.com/owner/repo  
-  destination: https://github.com/owner/repo
-```
-
-Initial Flow:
-
-1. Read Config
-2. Display what will be done (display list of repos to create)
-
-Apply Flow
-
-1. Create `.output.txt` file to track what has been done. This will be useful in cases where the command fails for some reason (i.e., network failures)
-2. Create destination repo
-3. Mirror clone, mirror push to destination repo
-
-Delete Flow
-
-1. Read config
-2. Display what will be done (display list of source repos to delete)
-
-Delete Apply Flow
-
-1. Read config
-2. Create `.delete_output.txt` file to track what has been done.
-3. Delete repos
-
 [tokens]: ./docs/tokens.md
