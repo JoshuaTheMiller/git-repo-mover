@@ -1,4 +1,5 @@
 config.yaml
+package-lock.json
 
 # Logs
 logs
