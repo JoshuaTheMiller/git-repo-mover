@@ -1,6 +1,6 @@
-import { RepoManager } from "./interfaces";
+import { IRepoManager } from "./repoManager";
 
-class GitHubRepoManager implements RepoManager {
+class GitHubRepoManager implements IRepoManager {
     public Scm =  "github";
 
     CreateRepo(path:string): Promise<boolean> {
