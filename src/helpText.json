@@ -1,0 +1,4 @@
+{
+    "pushError":"Make sure you are logged in to git locally! For example, if you are trying to push to repositories on GitHub, make sure your local instance of git is configured with those credentials!",
+    "pullError":"Make sure you are logged in to git locally! For example, if you are trying to pull from repositories on GitHub, make sure your local instance of git is configured with those credentials!"
+}
