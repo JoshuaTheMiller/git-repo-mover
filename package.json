@@ -1,0 +1,29 @@
+{
+  "name": "git-repo-mover",
+  "version": "0.0.0",
+  "description": "A simple tool to help move git repos",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaTheMiller/git-repo-mover.git"
+  },
+  "author": "JoshuaTheMiller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoshuaTheMiller/git-repo-mover/issues"
+  },
+  "homepage": "https://github.com/JoshuaTheMiller/git-repo-mover#readme",
+  "dependencies": {
+    "@commander-js/extra-typings": "github:commander-js/extra-typings",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
