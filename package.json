@@ -1,6 +1,6 @@
 {
   "name": "repo-mover",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple tool to help move git repos",
   "main": "src/index.ts",
   "scripts": {
