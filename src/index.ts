@@ -13,19 +13,11 @@ const run = new Command()
   .name("run")
   .description("Applies the given configuration. With no other flags passed, this will display what the tool plans on doing.")
   .option("-c, --config-path <string>", "The path to the configuration file.", "./config.yaml")
-  .option("--apply", "Applies the given configuration.", false)
-  .option("--delete-source-repos", "💣 DANGEROUS! Deletes the list of source repositories.", false)
+  .option("--apply", "Applies the given configuration.", false)  
   .action((_, opts) => {
-    const { apply, configPath, deleteSourceRepos } = opts.opts();    
+    const { apply, configPath } = opts.opts();    
 
     console.log(opts.opts());
-
-    if (apply && deleteSourceRepos) {
-      // TODO: consider splitting apply and delete into subcommands to further
-      // cement their seperation.
-      console.log("For safety, apply and deletion cannot be done at the same time!");
-      return;
-    }
 
     const response = ReadConfiguration(configPath);
 
@@ -39,16 +31,12 @@ const run = new Command()
 
     const config = response.Config;
 
-    if (!apply && !deleteSourceRepos) {
+    if (!apply) {
       runDryRun(config);
     }
 
     if (apply) {
       runApply(config);
-    }
-
-    if (deleteSourceRepos) {
-      runDelete(config);
     }
   });
 
@@ -69,9 +57,5 @@ function runDryRun(config: Configuration) {
 }
 
 function runApply(config: Configuration) {
-  throw new Error('Function not implemented.');
-}
-
-function runDelete(config: Configuration) {
   throw new Error('Function not implemented.');
 }
