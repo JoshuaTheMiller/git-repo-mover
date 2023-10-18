@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
 import { Command } from '@commander-js/extra-typings';
-import yaml from "js-yaml"
-import fs from "fs"
-import { Configuration } from './interfaces';
+
+import { Configuration, ReadConfiguration } from './configuration';
 
 const cli = new Command()
   .name("git-repo-mover")
@@ -28,7 +27,17 @@ const run = new Command()
       return;
     }
 
-    const config = yaml.load(fs.readFileSync(configPath, 'utf8')) as Configuration;
+    const response = ReadConfiguration(configPath);
+
+    if(response.Errors) {
+      console.log("Errors detected in configuration file:")
+      response.Errors.forEach((error) => {
+        console.log(`* ${error}`);
+      })
+      return;
+    }
+
+    const config = response.Config;
 
     if (!apply && !deleteSourceRepos) {
       runDryRun(config);
