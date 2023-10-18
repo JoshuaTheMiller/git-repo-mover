@@ -13,35 +13,32 @@ const cli = new Command()
 const run = new Command()
   .name("run")
   .description("Applies the given configuration. With no other flags passed, this will display what the tool plans on doing.")
-  .option("-c, --config-path", "The path to the configuration file.", "./config.yaml")
+  .option("-c, --config-path <string>", "The path to the configuration file.", "./config.yaml")
   .option("--apply", "Applies the given configuration.", false)
   .option("--delete-source-repos", "💣 DANGEROUS! Deletes the list of source repositories.", false)
-  .action((_, opts) => {  
-    const {apply, configPath, deleteSourceRepos} = opts.opts();
+  .action((_, opts) => {
+    const { apply, configPath, deleteSourceRepos } = opts.opts();    
 
-    if(apply && deleteSourceRepos) {
+    console.log(opts.opts());
+
+    if (apply && deleteSourceRepos) {
       // TODO: consider splitting apply and delete into subcommands to further
       // cement their seperation.
       console.log("For safety, apply and deletion cannot be done at the same time!");
       return;
     }
 
-    if(typeof configPath == "boolean") {
-      console.log("config-path must be a string!");
-      return;
-    }
-
     const config = yaml.load(fs.readFileSync(configPath, 'utf8')) as Configuration;
 
-    if(!apply && !deleteSourceRepos) {
+    if (!apply && !deleteSourceRepos) {
       runDryRun(config);
     }
 
-    if(apply) {
+    if (apply) {
       runApply(config);
     }
 
-    if(deleteSourceRepos) {
+    if (deleteSourceRepos) {
       runDelete(config);
     }
   });
@@ -52,7 +49,6 @@ cli.addCommand(run)
 if (!process.argv.slice(2).length) {
   cli.outputHelp();
 }
-
 
 function runDryRun(config: Configuration) {
   console.log("Configuration is as follows:")
