@@ -1,5 +1,5 @@
 {
-  "name": "git-repo-mover",
+  "name": "repo-mover",
   "version": "0.0.0",
   "description": "A simple tool to help move git repos",
   "main": "src/index.ts",
