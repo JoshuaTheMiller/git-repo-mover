@@ -107,7 +107,7 @@ git-repo-mover apply --accept
 Sometimes repositories transfers may fail. This can happen for a variety of reasons (i.e., network failures). Regardless, this tool contains helper commands to assist with that.
 
 ```sh
-git-repo-mover apply output
+git-repo-mover help output
 ```
 
 See the [FAQs](#faqs) for common issues.
