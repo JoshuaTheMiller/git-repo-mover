@@ -10,7 +10,7 @@ A simple tool to help with moving git repos around
 
 </div>
 
-## Now on NPM!
+## Now [on NPM](https://www.npmjs.com/package/repo-mover)!
 
 To run this tool, you do not need to clone this repository nor do you need to install the tool locally. By ensuring you have the [Prerequisites](#prerequisites) taken care of, you can simply run this tool using `npx`:
 
