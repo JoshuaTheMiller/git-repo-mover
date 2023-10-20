@@ -6,7 +6,7 @@
 
 A simple tool to help with moving git repos around
 
-[![Build](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml/badge.svg)](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml) [![CodeQL](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/github-code-scanning/codeql) [![CodeFactor](https://www.codefactor.io/repository/github/joshuathemiller/git-repo-mover/badge)](https://www.codefactor.io/repository/github/joshuathemiller/git-repo-mover) ![npm](https://img.shields.io/npm/dw/%40joshuamiller/repo-mover)
+[![Build](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml/badge.svg)](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/build.yml) [![CodeQL](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/JoshuaTheMiller/git-repo-mover/actions/workflows/github-code-scanning/codeql) [![CodeFactor](https://www.codefactor.io/repository/github/joshuathemiller/git-repo-mover/badge)](https://www.codefactor.io/repository/github/joshuathemiller/git-repo-mover) ![npm](https://img.shields.io/npm/dt/repo-mover)
 
 </div>
 
